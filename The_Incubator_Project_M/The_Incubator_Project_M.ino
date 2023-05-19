@@ -87,6 +87,7 @@ void loop() {
   humidity = HT.readHumidity();
   tempC = HT.readTemperature();
 
+  lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Humd: ");
   lcd.print(humidity);
@@ -101,7 +102,6 @@ void loop() {
   
   if(currentTime - previousTime == 120000 && limitPin != 0){ 
           motor.forward();
-          //motor.setSpeed(255);
           printInfo();
       while(limitPin != 1){  // when the limitSwitch is Triggered
         
@@ -134,12 +134,12 @@ void loop() {
 
 
   void printInfo() {
-    lcd.clear();
+//    lcd.clear();
     lcd.setCursor(0, 1);
     lcd.print("Turning -->");
   }
    void printInfo2() {
-    lcd.clear();
+//    lcd.clear();
     lcd.setCursor(0, 1);
     lcd.print("Turning <--");
   }
