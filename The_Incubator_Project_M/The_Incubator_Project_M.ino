@@ -3,6 +3,14 @@
 #include <DHT.h>
 #include <L298N.h>
 
+// Pins
+// LCD Pins A4, A5
+// DHT pin 2
+// Motor Pins 7, 8, 9
+// Heater pin 4
+// Limit SwitcH Pin 3
+// Fan Switch If Any 5
+
 
 //Timer
       unsigned long currentTime = millis();
