@@ -73,9 +73,8 @@ void setup() {
     }
 
     if (currentTime == 10 && limitPin != 1){
-      motor.backward();
       while(currentTime < 15000){ //hardcode time for it to reach 180 degrees
-        
+         motor.backward();
       }
           motor.stop();
     }
@@ -101,10 +100,9 @@ void loop() {
 //120,000 milliseconds Equals 2 minutes
   
   if(currentTime - previousTime == 120000 && limitPin != 0){ 
-          motor.forward();
-          printInfo();
-      while(limitPin != 1){  // when the limitSwitch is Triggered
-        
+         while(limitPin != 1){  // when the limitSwitch is Triggered
+              motor.forward();
+              printInfo();
         }  
             motor.stop();
             previousTime = currentTime;
